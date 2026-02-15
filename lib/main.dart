@@ -2,9 +2,14 @@ import 'package:adsf/profile_screen.dart';
 import 'package:adsf/prograsss.dart';
 import 'package:adsf/sing_in_scren.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
+import 'flip_card_screen.dart';
+import 'nid_card_screen.dart';
 import 'otp_screen.dart';
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init(); // Initialize GetStorage
   runApp(const MyApp());
 }
 
@@ -13,9 +18,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OtpScreen(),
+      home: FrontNIDScreen(),
     );
   }
 }

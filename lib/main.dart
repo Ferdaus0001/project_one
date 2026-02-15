@@ -1,6 +1,9 @@
 import 'package:adsf/profile_screen.dart';
 import 'package:adsf/prograsss.dart';
+import 'package:adsf/sing_in_scren.dart';
 import 'package:flutter/material.dart';
+
+import 'otp_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
+      home: OtpScreen(),
     );
   }
 }
